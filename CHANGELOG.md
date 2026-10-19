@@ -1,0 +1,29 @@
+# Changelog
+
+## 0.0.1-draft — Beta prerelease
+
+Initial beta. APIs and compatibility guarantees may change before a stable release.
+
+### Added
+
+- Native Crystal ClickHouse TCP driver with revision-aware Hello, query, progress,
+  exception, and completion handling at protocol revision 54460.
+- TCP and verified TLS connections, password authentication, redacted
+  configuration inspection, IO timeouts, and query deadlines.
+- Materialized queries, row/block streaming, typed server-side parameters,
+  settings, and explicit ownership of one active operation per connection.
+- Server-schema-guided Native binary inserts with bounded batches and explicit
+  unknown-outcome errors after transport failures.
+- Direct columnar `insert_blocks`, typed column arrays, and mixed row/block
+  batches with schema validation and retained caller ownership.
+- Primitive, binary string, nullable, exact numeric/time, UUID/IP, enum,
+  Array/Tuple/Map, and per-block LowCardinality codecs.
+- Pure Crystal LZ4 and ClickHouse CityHash128 1.0.2 compression with bounded frame
+  validation and independent upstream fixtures.
+- Deterministic protocol, codec, compression, configuration, and real-server
+  integration specs; pinned LTS/stable Docker services with private-CA TLS.
+- Standalone connection, streaming-query, batch-insert, and typed-value examples.
+- Standalone Kemal API for bulk OpenRTB bid-request inserts and paginated
+  date/time lookups, with injected handlers, HTTP specs, and real-server tests.
+- Local-only, opt-in Docker benchmark comparing one million randomized OpenRTB
+  records per insertion mode in batches of 10,000, with persistence verification.

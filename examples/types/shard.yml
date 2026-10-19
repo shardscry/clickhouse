@@ -1,0 +1,12 @@
+name: clickhouse_types_example
+version: 0.0.1-draft
+crystal: ">= 1.21.0"
+
+dependencies:
+  clickhouse:
+    path: ../..
+    version: 0.0.1-draft
+
+targets:
+  example:
+    main: example.cr

@@ -1,0 +1,4 @@
+Globs:
+  - "**/*.cr"
+  - "!lib"
+  - "!examples/*/lib/**/*.cr"

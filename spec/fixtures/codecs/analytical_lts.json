@@ -1,0 +1,7 @@
+{
+  "server": "26.8.31.2",
+  "image": "clickhouse/clickhouse-server:26.8.31.2@sha256:05d2e46507afdcf08da46e5528b68847104dbbed691c327e505414b4b7f4e4c8",
+  "format_revision": 0,
+  "generator": "clickhouse-client --low_cardinality_allow_in_native_format=1 --query SQL | base64",
+  "sql": "SELECT toUInt128('340282366920938463463374607431768211455') AS wide, toInt128('-170141183460469231731687303715884105728') AS signed, unhex('00ff61') AS binary, toFixedString(unhex('00ff61'),5) AS fixed, CAST(NULL AS Nullable(UInt16)) AS absent, NULL AS nothing, toDateTime64('1969-12-31 23:59:59.999',3,'UTC') AS precise, toUUID('550e8400-e29b-41d4-a716-446655440000') AS uid, toIPv4('192.168.1.10') AS ip4, toIPv6('2001:db8::1') AS ip6, toDecimal128('-12345678901234567890.1234',4) AS amount, CAST('off' AS Enum8('on'=1,'off'=-1)) AS kind, CAST([1,NULL,3] AS Array(Nullable(UInt16))) AS items, tuple('Ada',[1,2]) AS details, map('a',toUInt8(1),'a',toUInt8(2)) AS pairs, toLowCardinality('Ada') AS category, CAST(NULL AS LowCardinality(Nullable(String))) AS optional_category, CAST(['Ada','Grace'] AS Array(LowCardinality(String))) AS categories FORMAT Native"
+}

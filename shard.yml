@@ -1,0 +1,17 @@
+name: clickhouse
+version: 0.0.1-draft
+crystal: ">= 1.21.0"
+
+authors:
+  - Anar K. Jafarov <anar.k.jafarov@gmail.com>
+
+development_dependencies:
+  ameba:
+    github: crystal-ameba/ameba
+    version: ~> 1.7.0
+
+targets:
+  ameba:
+    main: lib/ameba/bin/ameba.cr
+
+license: MIT

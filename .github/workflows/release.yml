@@ -1,0 +1,52 @@
+name: Release
+
+on:
+  push:
+    tags: ["v*-draft"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Check beta release metadata
+        env:
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: |
+          python3 - <<'PY'
+          import os
+          import re
+          from pathlib import Path
+
+          manifest = Path("shard.yml").read_text()
+          source = Path("src/clickhouse/version.cr").read_text()
+          version = re.search(r"^version:\s*(\S+)", manifest, re.MULTILINE).group(1)
+          source_version = re.search(r'^\s*VERSION\s*=\s*"([^"]+)"', source, re.MULTILINE).group(1)
+          assert source_version == version, "manifest/source version mismatch"
+          assert os.environ["RELEASE_TAG"] == "v" + version, "tag/version mismatch"
+          assert version.endswith("-draft"), "this workflow publishes draft prereleases"
+          assert "Beta" in Path("RELEASE_NOTES.md").read_text(), "missing beta release notes"
+          PY
+
+      - name: Publish beta prerelease
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: |
+          release_action=create
+          if gh release view "$RELEASE_TAG" >/dev/null 2>&1; then
+            release_action=edit
+          fi
+          gh release "$release_action" "$RELEASE_TAG" \
+            --verify-tag \
+            --target "$GITHUB_SHA" \
+            --title "ClickHouse $RELEASE_TAG (Beta)" \
+            --notes-file RELEASE_NOTES.md \
+            --prerelease \
+            --latest=false \
+            --draft=false

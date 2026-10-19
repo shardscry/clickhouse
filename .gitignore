@@ -1,0 +1,10 @@
+/lib/
+/bin/
+/.shards/
+/.crystal-cache/
+/.cache/
+/.idea/
+/.DS_Store
+/shard.lock
+/coverage/
+*.dwarf

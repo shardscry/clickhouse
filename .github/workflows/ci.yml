@@ -1,0 +1,82 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  unit:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Format, lint, and unit specs
+        run: |
+          docker run --rm -v "$PWD:/app" -w /app \
+            -e CRYSTAL_CACHE_DIR=/tmp/crystal-cache crystallang/crystal:1.21.0 \
+            bash -ec 'shards install
+          crystal tool format --check --exclude lib --exclude examples/kemal_api/lib
+          shards build ameba
+          bin/ameba
+          crystal spec --error-on-warnings --error-trace'
+
+  integration:
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        server: [lts, stable]
+        compression: [none, lz4]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate disposable TLS certificates
+        run: bash scripts/generate-test-certs.sh
+      - name: Start pinned native TCP and TLS servers
+        run: docker compose up -d --wait
+      - name: Independently validate revision 54460
+        if: matrix.compression == 'none'
+        env:
+          SERVER: ${{ matrix.server }}
+        run: |
+          if [ "$SERVER" = lts ]; then
+            tcp_port=19000
+            tls_port=19440
+          else
+            tcp_port=29000
+            tls_port=29440
+          fi
+          python3 scripts/native-protocol-probe.py --port "$tcp_port"
+          python3 scripts/native-protocol-probe.py --port "$tls_port" \
+            --tls --ca spec/fixtures/tls/ca.crt --tls-hostname localhost
+      - name: Run Crystal integration specs
+        env:
+          CLICKHOUSE_COMPRESSION: ${{ matrix.compression }}
+        run: bash scripts/test-integration.sh '${{ matrix.server }}'
+      - name: Server diagnostics
+        if: failure()
+        run: docker compose logs --tail 100
+      - name: Stop disposable servers
+        if: always()
+        run: docker compose down -v
+
+  kemal-api:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Start the example's disposable ClickHouse server
+        run: docker compose -f examples/kemal_api/docker-compose.yml up -d --wait
+      - name: Build and test the standalone API
+        run: |
+          docker run --rm --network clickhouse-kemal-ortb_default \
+            -v "$PWD:/app" -w /app/examples/kemal_api \
+            -e CRYSTAL_CACHE_DIR=/tmp/crystal-cache \
+            -e CLICKHOUSE_URL=clickhouse://default:clickhouse_test@clickhouse:9000/default \
+            crystallang/crystal:1.21.0 bash -ec 'shards install
+          crystal spec --error-on-warnings --error-trace
+          CLICKHOUSE_INTEGRATION=1 crystal spec --error-on-warnings --error-trace
+          crystal build src/main.cr --error-on-warnings -o /tmp/kemal_api'
+      - name: Server diagnostics
+        if: failure()
+        run: docker compose -f examples/kemal_api/docker-compose.yml logs --tail 100
+      - name: Stop the example's disposable server
+        if: always()
+        run: docker compose -f examples/kemal_api/docker-compose.yml down -v

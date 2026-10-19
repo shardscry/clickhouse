@@ -1,0 +1,19 @@
+<clickhouse>
+    <listen_host replace="replace">0.0.0.0</listen_host>
+    <tcp_port_secure>9440</tcp_port_secure>
+    <openSSL>
+        <server>
+            <certificateFile>/etc/clickhouse-server/certs/server.crt</certificateFile>
+            <privateKeyFile>/etc/clickhouse-server/certs/server.key</privateKeyFile>
+            <caConfig>/etc/clickhouse-server/certs/ca.crt</caConfig>
+            <verificationMode>none</verificationMode>
+            <loadDefaultCAFile>false</loadDefaultCAFile>
+            <cacheSessions>true</cacheSessions>
+        </server>
+    </openSSL>
+    <logger><level>warning</level><console>true</console></logger>
+    <max_server_memory_usage>1200000000</max_server_memory_usage>
+    <mark_cache_size>67108864</mark_cache_size>
+    <uncompressed_cache_size>16777216</uncompressed_cache_size>
+    <background_schedule_pool_size>4</background_schedule_pool_size>
+</clickhouse>

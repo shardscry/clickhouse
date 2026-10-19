@@ -1,0 +1,34 @@
+name: clickhouse-crystal
+
+x-clickhouse: &clickhouse
+  environment:
+    CLICKHOUSE_USER: default
+    CLICKHOUSE_PASSWORD: clickhouse_test
+    CLICKHOUSE_DEFAULT_ACCESS_MANAGEMENT: "1"
+  volumes:
+    - ./spec/fixtures/docker/config.xml:/etc/clickhouse-server/config.d/crystal-tests.xml:ro
+    - ./spec/fixtures/tls:/etc/clickhouse-server/certs:ro
+  healthcheck:
+    test: ["CMD", "clickhouse-client", "--user", "default", "--password", "clickhouse_test", "--query", "SELECT 1"]
+    interval: 2s
+    timeout: 5s
+    retries: 45
+    start_period: 10s
+  mem_limit: 2g
+
+services:
+  clickhouse-lts:
+    <<: *clickhouse
+    image: clickhouse/clickhouse-server:26.8.31.2@sha256:05d2e46507afdcf08da46e5528b68847104dbbed691c327e505414b4b7f4e4c8
+    container_name: clickhouse-crystal-lts
+    ports:
+      - "127.0.0.1:19000:9000"
+      - "127.0.0.1:19440:9440"
+
+  clickhouse-stable:
+    <<: *clickhouse
+    image: clickhouse/clickhouse-server:26.9.22.3@sha256:3358498f63c33d60ec1fa3abe9918e63c6b1d86dbad20e5613590a2899d5d872
+    container_name: clickhouse-crystal-stable
+    ports:
+      - "127.0.0.1:29000:9000"
+      - "127.0.0.1:29440:9440"
