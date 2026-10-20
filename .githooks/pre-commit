@@ -26,5 +26,15 @@ bin/ameba
 echo "[pre-commit] type-checking src/clickhouse.cr"
 crystal build --no-codegen --error-on-warnings src/clickhouse.cr
 
+echo "[pre-commit] generating API documentation"
+crystal docs src/clickhouse.cr -o docs --project-version=main-dev --source-refname=main
+find docs -type f \( -name '*.html' -o -name '*.css' -o -name '*.js' -o -name '*.json' \) \
+  -exec perl -pi -e 's/[ \t]+$//' {} +
+
+if ! git diff --quiet -- docs || [[ -n "$(git ls-files --others --exclude-standard -- docs)" ]]; then
+  echo "[pre-commit] generated docs changed; review and stage docs/ before committing"
+  exit 1
+fi
+
 echo "[pre-commit] running local specs"
 CLICKHOUSE_INTEGRATION=0 crystal spec --order=random --error-on-warnings --error-trace

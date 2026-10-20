@@ -205,9 +205,20 @@ git config core.hooksPath .githooks
 ```
 
 Enable the hook once per clone. It checks formatting, runs Ameba, type-checks the
-library, and runs local specs in random order before each commit. Run
-`.githooks/pre-commit` manually to perform the same checks. Installed example
-dependencies are excluded from formatting.
+library, generates API documentation, and runs local specs in random order before
+each commit. Run `.githooks/pre-commit` manually to perform the same checks.
+Installed example dependencies are excluded from formatting.
+
+The [API reference](docs/index.html) is generated with
+`crystal docs src/clickhouse.cr -o docs --project-version=main-dev --source-refname=main`.
+The hook normalizes trailing whitespace and stops when generated files need
+review. Stage the updated `docs/` along with source changes before committing.
+
+With `kcov` installed, run `make coverage` to build the debug spec runner and
+collect source coverage in `coverage/index.html`. Coverage runs local specs;
+CI builds kcov 43 on Ubuntu 24.04 and uploads the report as `coverage-report`.
+No minimum coverage percentage is enforced. kcov requires process-tracing
+permissions; use the CI artifact when local tracing is restricted.
 
 Real-server specs are opt-in. The Docker configuration pins ClickHouse
 **26.8.31.2 LTS** and **26.9.22.3 stable** by image digest and exposes loopback TCP

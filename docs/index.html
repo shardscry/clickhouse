@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Crystal Docs 1.18.2">
+<meta name="crystal_docs.project_version" content="main-dev">
+<meta name="crystal_docs.project_name" content="clickhouse">
+
+
+
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/doc.js"></script>
+
+  <meta name="repository-name" content="clickhouse">
+  <title>clickhouse main-dev</title>
+  <script type="text/javascript">
+  CrystalDocs.base_path = "";
+  </script>
+</head>
+<body>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill="currentColor" fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+<input type="checkbox" id="sidebar-btn">
+<label for="sidebar-btn" id="sidebar-btn-label">
+  <svg class="open" xmlns="http://www.w3.org/2000/svg" height="2em" width="2em" viewBox="0 0 512 512"><title>Open Sidebar</title><path fill="currentColor" d="M80 96v64h352V96H80zm0 112v64h352v-64H80zm0 112v64h352v-64H80z"></path></svg>
+  <svg class="close" xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 512 512"><title>Close Sidebar</title><path fill="currentColor" d="m118.6 73.4-45.2 45.2L210.7 256 73.4 393.4l45.2 45.2L256 301.3l137.4 137.3 45.2-45.2L301.3 256l137.3-137.4-45.2-45.2L256 210.7Z"></path></svg>
+</label>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="index.html">
+          clickhouse
+        </a>
+      </h1>
+
+      <span class="project-version">
+        main-dev
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+
+  <li class="parent " data-id="clickhouse/ClickHouse" data-name="clickhouse">
+      <a href="ClickHouse.html">ClickHouse</a>
+
+        <ul>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Batch" data-name="clickhouse::batch">
+      <a href="ClickHouse/Batch.html">Batch</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Block" data-name="clickhouse::block">
+      <a href="ClickHouse/Block.html">Block</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/BusyError" data-name="clickhouse::busyerror">
+      <a href="ClickHouse/BusyError.html">BusyError</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Client" data-name="clickhouse::client">
+      <a href="ClickHouse/Client.html">Client</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/ClosedError" data-name="clickhouse::closederror">
+      <a href="ClickHouse/ClosedError.html">ClosedError</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/CodecError" data-name="clickhouse::codecerror">
+      <a href="ClickHouse/CodecError.html">CodecError</a>
+
+    </li>
+
+  <li class="parent " data-id="clickhouse/ClickHouse/Codecs" data-name="clickhouse::codecs">
+      <a href="ClickHouse/Codecs.html">Codecs</a>
+
+        <ul>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Codecs/BlockCodec" data-name="clickhouse::codecs::blockcodec">
+      <a href="ClickHouse/Codecs/BlockCodec.html">BlockCodec</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Codecs/ColumnCodec" data-name="clickhouse::codecs::columncodec">
+      <a href="ClickHouse/Codecs/ColumnCodec.html">ColumnCodec</a>
+
+    </li>
+
+</ul>
+
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Column" data-name="clickhouse::column">
+      <a href="ClickHouse/Column.html">Column</a>
+
+    </li>
+
+  <li class="parent " data-id="clickhouse/ClickHouse/Compression" data-name="clickhouse::compression">
+      <a href="ClickHouse/Compression.html">Compression</a>
+
+        <ul>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Compression/CityHash" data-name="clickhouse::compression::cityhash">
+      <a href="ClickHouse/Compression/CityHash.html">CityHash</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Compression/Error" data-name="clickhouse::compression::error">
+      <a href="ClickHouse/Compression/Error.html">Error</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Compression/LZ4" data-name="clickhouse::compression::lz4">
+      <a href="ClickHouse/Compression/LZ4.html">LZ4</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Compression/Reader" data-name="clickhouse::compression::reader">
+      <a href="ClickHouse/Compression/Reader.html">Reader</a>
+
+    </li>
+
+</ul>
+
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Config" data-name="clickhouse::config">
+      <a href="ClickHouse/Config.html">Config</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Connection" data-name="clickhouse::connection">
+      <a href="ClickHouse/Connection.html">Connection</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/ConnectionError" data-name="clickhouse::connectionerror">
+      <a href="ClickHouse/ConnectionError.html">ConnectionError</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/DateValue" data-name="clickhouse::datevalue">
+      <a href="ClickHouse/DateValue.html">DateValue</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Decimal" data-name="clickhouse::decimal">
+      <a href="ClickHouse/Decimal.html">Decimal</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/EnumValue" data-name="clickhouse::enumvalue">
+      <a href="ClickHouse/EnumValue.html">EnumValue</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Error" data-name="clickhouse::error">
+      <a href="ClickHouse/Error.html">Error</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/InsertOutcomeUnknown" data-name="clickhouse::insertoutcomeunknown">
+      <a href="ClickHouse/InsertOutcomeUnknown.html">InsertOutcomeUnknown</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/IPv4" data-name="clickhouse::ipv4">
+      <a href="ClickHouse/IPv4.html">IPv4</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/IPv6" data-name="clickhouse::ipv6">
+      <a href="ClickHouse/IPv6.html">IPv6</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/MapValue" data-name="clickhouse::mapvalue">
+      <a href="ClickHouse/MapValue.html">MapValue</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Progress" data-name="clickhouse::progress">
+      <a href="ClickHouse/Progress.html">Progress</a>
+
+    </li>
+
+  <li class="parent " data-id="clickhouse/ClickHouse/Protocol" data-name="clickhouse::protocol">
+      <a href="ClickHouse/Protocol.html">Protocol</a>
+
+        <ul>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Protocol/Deadline" data-name="clickhouse::protocol::deadline">
+      <a href="ClickHouse/Protocol/Deadline.html">Deadline</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Protocol/Parameters" data-name="clickhouse::protocol::parameters">
+      <a href="ClickHouse/Protocol/Parameters.html">Parameters</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Protocol/QueryPacket" data-name="clickhouse::protocol::querypacket">
+      <a href="ClickHouse/Protocol/QueryPacket.html">QueryPacket</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Protocol/Reader" data-name="clickhouse::protocol::reader">
+      <a href="ClickHouse/Protocol/Reader.html">Reader</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Protocol/Writer" data-name="clickhouse::protocol::writer">
+      <a href="ClickHouse/Protocol/Writer.html">Writer</a>
+
+    </li>
+
+</ul>
+
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/ProtocolError" data-name="clickhouse::protocolerror">
+      <a href="ClickHouse/ProtocolError.html">ProtocolError</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/QueryTimeoutError" data-name="clickhouse::querytimeouterror">
+      <a href="ClickHouse/QueryTimeoutError.html">QueryTimeoutError</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Result" data-name="clickhouse::result">
+      <a href="ClickHouse/Result.html">Result</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Row" data-name="clickhouse::row">
+      <a href="ClickHouse/Row.html">Row</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/ServerError" data-name="clickhouse::servererror">
+      <a href="ClickHouse/ServerError.html">ServerError</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/ServerInfo" data-name="clickhouse::serverinfo">
+      <a href="ClickHouse/ServerInfo.html">ServerInfo</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Summary" data-name="clickhouse::summary">
+      <a href="ClickHouse/Summary.html">Summary</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Timestamp" data-name="clickhouse::timestamp">
+      <a href="ClickHouse/Timestamp.html">Timestamp</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Transport" data-name="clickhouse::transport">
+      <a href="ClickHouse/Transport.html">Transport</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/TupleValue" data-name="clickhouse::tuplevalue">
+      <a href="ClickHouse/TupleValue.html">TupleValue</a>
+
+    </li>
+
+  <li class="parent " data-id="clickhouse/ClickHouse/Types" data-name="clickhouse::types">
+      <a href="ClickHouse/Types.html">Types</a>
+
+        <ul>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Types/Parser" data-name="clickhouse::types::parser">
+      <a href="ClickHouse/Types/Parser.html">Parser</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Types/Type" data-name="clickhouse::types::type">
+      <a href="ClickHouse/Types/Type.html">Type</a>
+
+    </li>
+
+</ul>
+
+
+    </li>
+
+  <li class="parent " data-id="clickhouse/ClickHouse/Value" data-name="clickhouse::value">
+      <a href="ClickHouse/Value.html">Value</a>
+
+        <ul>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Value/Data" data-name="clickhouse::value::data">
+      <a href="ClickHouse/Value/Data.html">Data</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Value/Integer" data-name="clickhouse::value::integer">
+      <a href="ClickHouse/Value/Integer.html">Integer</a>
+
+    </li>
+
+</ul>
+
+
+    </li>
+
+</ul>
+
+
+    </li>
+
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1><a id="click-house" class="anchor" href="#click-house">  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>ClickHouse</h1>
+<p><a href="https://crystal-lang.org/"><img src="https://img.shields.io/badge/Crystal-1.21+-000000?logo=crystal&amp;logoColor=white" alt="Crystal" /></a>
+<a href="https://clickhouse.com/"><img src="https://img.shields.io/badge/ClickHouse-Native%20TCP%20Client-FFCC01?logo=clickhouse&amp;logoColor=black" alt="ClickHouse Native" /></a>
+<a href="https://clickhouse.com/"><img src="https://img.shields.io/badge/ClickHouse-Query%20Client-FFCC01?logo=clickhouse&amp;logoColor=black" alt="ClickHouse Query" /></a></p>
+<p>A native Crystal driver for ClickHouse over TCP and verified TLS. The shard owns
+the native protocol, columnar type codecs, binary batch inserts, and LZ4/CityHash
+compression. It does not invoke <code>clickhouse-client</code> or wrap a C++ client library.</p>
+<p>Requires Crystal <strong>1.21.0 or newer</strong>. TLS uses Crystal's standard OpenSSL support;
+compression is implemented in Crystal without an additional native dependency.</p>
+<h2><a id="installation" class="anchor" href="#installation">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Installation</h2>
+<p>Add the repository to your application's <code>shard.yml</code> and run <code>shards install</code>:</p>
+<pre><code class="language-yaml">dependencies:
+  clickhouse:
+    github: shardscry/clickhouse
+    version: ~&gt; 0.0.1</code></pre>
+<p>The current version is <strong><code>0.0.1</code></strong>, an early development release. APIs and protocol
+coverage may change as the shard develops. The examples install the published
+GitHub dependency with <code>~&gt; 0.0.1</code> and can run outside this checkout. See
+<a href="RELEASE_NOTES.md">release notes</a> for capabilities, validation, and known limitations.</p>
+<h2><a id="connect-and-query" class="anchor" href="#connect-and-query">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Connect and query</h2>
+<pre><code class="language-crystal"><span class="k">require</span> <span class="s">&quot;clickhouse&quot;</span>
+
+client <span class="o">=</span> <span class="t">ClickHouse</span><span class="t">::</span><span class="t">Client</span>.from_string(
+  <span class="t">ENV</span>[<span class="s">&quot;CLICKHOUSE_URL&quot;</span>]? <span class="o">||</span> <span class="s">&quot;clickhouse://default:password@127.0.0.1:9000/default&quot;</span>,
+  compression: <span class="n">:lz4</span>,
+)
+
+<span class="k">begin</span>
+  puts client.ping
+
+  result <span class="o">=</span> client.query(
+    <span class="s">&quot;SELECT {id:UInt64} AS id, {name:String} AS name&quot;</span>,
+    params: {id: <span class="n">42_u64</span>, name: <span class="s">&quot;Ada&quot;</span>},
+  )
+  result.rows.each <span class="k">do</span> <span class="o">|</span>row<span class="o">|</span>
+    puts <span class="s">&quot;</span><span class="i">#{</span>row[<span class="s">&quot;id&quot;</span>].as_u64<span class="i">}</span><span class="s">: </span><span class="i">#{</span>row[<span class="s">&quot;name&quot;</span>].as_s<span class="i">}</span><span class="s">&quot;</span>
+  <span class="k">end</span>
+<span class="k">ensure</span>
+  client.close
+<span class="k">end</span></code></pre>
+<p>Parameters use ClickHouse's typed <code>{name:Type}</code> syntax. Values travel separately
+from SQL; use parameters rather than interpolating application data. Settings
+can be passed separately, for example <code>settings: {max_block_size: 1000}</code>.</p>
+<p><code>clickhouse://</code> defaults to port <code>9000</code>; <code>clickhouses://</code> enables TLS and defaults
+to <code>9440</code>. Percent-encode credentials and database names when needed. Supply
+<code>tls_ca: &quot;/path/to/ca.pem&quot;</code> for a private CA, and <code>tls_hostname:</code> when the verified
+server name differs from the connection address. Certificate and hostname
+verification are enabled by default.</p>
+<h2><a id="streaming-and-connection-ownership" class="anchor" href="#streaming-and-connection-ownership">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Streaming and connection ownership</h2>
+<p>Use <code>query_each</code> to consume rows without materializing the whole result:</p>
+<pre><code class="language-crystal">client.query_each(<span class="s">&quot;SELECT number FROM numbers({count:UInt64})&quot;</span>, params: {count: <span class="n">10_000_u64</span>}) <span class="k">do</span> <span class="o">|</span>row<span class="o">|</span>
+  puts row[<span class="s">&quot;number&quot;</span>].as_u64
+<span class="k">end</span></code></pre>
+<p><code>query_blocks</code> yields columnar <code><a href="ClickHouse/Block.html">ClickHouse::Block</a></code> values. Streaming retains one
+decoded block at a time; retained rows keep their owned values. <code>query</code> collects
+rows and enforces <code>max_result_rows</code> (default <code>1_000_000</code>) and <code>max_result_bytes</code>
+(default <code>64 MiB</code> of decoded Native data). Query methods report errors even after
+earlier rows have been yielded.</p>
+<p>One client has one connection and one active operation. Overlapping operations
+raise <code><a href="ClickHouse/BusyError.html">ClickHouse::BusyError</a></code>; use separate clients for concurrency. Timeouts,
+malformed packets, or abandoning a streaming result discard the connection.
+Create a new client after it closes. Operations are never replayed automatically.</p>
+<h2><a id="binary-batch-inserts" class="anchor" href="#binary-batch-inserts">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Binary batch inserts</h2>
+<pre><code class="language-crystal">client.exec(<span class="s">&quot;CREATE TABLE IF NOT EXISTS users (id UInt64, name String) ENGINE=MergeTree ORDER BY id&quot;</span>)
+
+client.insert(<span class="s">&quot;users&quot;</span>, columns: [<span class="s">&quot;id&quot;</span>, <span class="s">&quot;name&quot;</span>]) <span class="k">do</span> <span class="o">|</span>batch<span class="o">|</span>
+  batch.append(<span class="n">1_u64</span>, <span class="s">&quot;Ada&quot;</span>)
+  batch.append(<span class="n">2_u64</span>, <span class="s">&quot;Grace&quot;</span>)
+<span class="k">end</span></code></pre>
+<p>The server supplies the column schema. Values are encoded as Native columns,
+not SQL <code>VALUES</code> strings. Column order and types must match the requested schema.
+Configure <code>batch_size</code> (default <code>1000</code>) and <code>batch_bytes</code> (default <code>8 MiB</code>) when
+constructing the client. A transport failure after an upload starts can raise
+<code><a href="ClickHouse/InsertOutcomeUnknown.html">ClickHouse::InsertOutcomeUnknown</a></code>, including the query ID; verify the result
+before deciding whether to retry.</p>
+<p>For data already arranged in columns, submit Native blocks directly:</p>
+<pre><code class="language-crystal">block <span class="o">=</span> <span class="t">ClickHouse</span><span class="t">::</span><span class="t">Block</span>.new([
+  <span class="t">ClickHouse</span><span class="t">::</span><span class="t">Column</span>.new(<span class="s">&quot;id&quot;</span>, <span class="s">&quot;UInt64&quot;</span>, [<span class="n">3_u64</span>, <span class="n">4_u64</span>]),
+  <span class="t">ClickHouse</span><span class="t">::</span><span class="t">Column</span>.new(<span class="s">&quot;name&quot;</span>, <span class="s">&quot;String&quot;</span>, [<span class="s">&quot;Katherine&quot;</span>, <span class="s">&quot;Margaret&quot;</span>]),
+])
+client.insert_blocks(<span class="s">&quot;users&quot;</span>, columns: [<span class="s">&quot;id&quot;</span>, <span class="s">&quot;name&quot;</span>], blocks: [block])</code></pre>
+<p>Both insertion interfaces send Native binary blocks. <code>insert_blocks</code> avoids
+per-row argument arrays and transposition, and consumes its block enumerable
+once. Column names, order, types, dimensions, and configured batch limits are
+validated against the server schema. Supplied blocks retain their values after
+insertion. Construct each block within <code>batch_size</code> and <code>batch_bytes</code>; direct
+blocks are not split automatically. <code>batch.append_block(block)</code> also supports
+mixing row input and complete columns in one INSERT.</p>
+<h2><a id="values-and-supported-types" class="anchor" href="#values-and-supported-types">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Values and supported types</h2>
+<p>Rows support access by column name or index, returning <code><a href="ClickHouse/Value.html">ClickHouse::Value</a></code>.</p>
+<p>| ClickHouse types | Crystal access and representation |
+| --- | --- |
+| Int/UInt8–128 | <code>as_i64</code>, <code>as_u64</code>, <code>as_i128</code>, <code>as_u128</code>; checked conversions |
+| Float32/64, Bool | <code>as_f64</code>, <code>as_bool</code> |
+| String, FixedString | <code>as_bytes</code> preserves arbitrary bytes; <code>as_s</code> is explicit text access; FixedString retains padding |
+| Nullable(T), Nothing | <code>null?</code> distinguishes nulls from default values |
+| Decimal32/64/128, Decimal(P,S) up to precision 38 | <code>as_decimal</code>: exact <code>unscaled : Int128</code> and <code>scale</code> |
+| Date, Date32 | <code>raw.as(<a href="ClickHouse/DateValue.html">ClickHouse::DateValue</a>)</code> stores days from the Unix epoch |
+| DateTime, DateTime64 | <code>as_timestamp</code>: signed ticks, precision, timezone metadata; <code>to_time</code> converts the instant |
+| UUID | <code>as_uuid</code> |
+| IPv4, IPv6 | <code>raw.as(<a href="ClickHouse/IPv4.html">ClickHouse::IPv4</a>)</code> / <code>raw.as(<a href="ClickHouse/IPv6.html">ClickHouse::IPv6</a>)</code> |
+| Enum8/16 | <code>as_s</code> returns the label; <code>raw.as(<a href="ClickHouse/EnumValue.html">ClickHouse::EnumValue</a>)</code> retains the signed code |
+| Array(T), Tuple, named Tuple | <code>as_array</code>, <code>as_tuple.values</code>, <code>as_tuple.names</code> |
+| Map(K,V) | <code>as_map.entries</code>: ordered pairs preserving duplicate keys |
+| LowCardinality(T) | Decoded values use the inner type's accessors |</p>
+<p>Insert exact decimals with <code>ClickHouse::Decimal.new(12_345_i128, 2)</code> and timestamps
+with <code>ClickHouse::Timestamp.new(ticks, precision, timezone)</code>. Arrays and tuples
+are wrapped automatically. Use <code><a href="ClickHouse/MapValue.html">ClickHouse::MapValue</a></code> when duplicate map keys
+matter; a Crystal <code>Hash</code> cannot represent those duplicates.</p>
+<p>ClickHouse's text parameter parser interprets negative fractional epoch values
+between <code>-1</code> and <code>0</code> seconds incorrectly. <code>Time</code> and <code>Timestamp</code> query parameters
+in that interval raise <code>ArgumentError</code> before sending SQL. Pass exact ticks as an
+<code>Int64</code> parameter and use <code>fromUnixTimestamp64Nano({ticks:Int64}, 'UTC')</code> instead
+(or the corresponding milli/microsecond function). Native binary DateTime64
+queries and inserts preserve the full supported tick range, including that interval.</p>
+<p>The client advertises protocol revision <strong>54460</strong>, with minimum server protocol
+revision <strong>54459</strong>. Codecs reject unsupported types and custom serialization.
+Connection pooling, a <code>crystal-db</code> adapter, ZSTD, external tables, transactions,
+Int/UInt256, Decimal256, AggregateFunction states, and JSON/Variant/Dynamic codecs
+are not implemented. LowCardinality supports per-block dictionaries; shared
+dictionary serialization is rejected.</p>
+<h2><a id="configuration-and-errors" class="anchor" href="#configuration-and-errors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Configuration and errors</h2>
+<p>Client keyword options include <code>connect_timeout</code> (default <code>5.seconds</code>),
+<code>read_timeout</code>, <code>write_timeout</code>, and <code>query_timeout</code> (each <code>30.seconds</code>),
+<code>compression: :none | :lz4</code>, and the batch/result limits above. <code>:none</code> disables
+native compression; LZ4 applies to Native data blocks, not packet headers.</p>
+<p><code><a href="ClickHouse/ServerError.html">ClickHouse::ServerError</a></code> preserves the server's <code>code</code>, <code>name</code>, <code>server_stack</code>,
+and query ID. Connection, busy-state, deadline, codec, and ambiguous-insert
+failures have distinct exception types. Configuration inspection redacts passwords.</p>
+<h2><a id="examples" class="anchor" href="#examples">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Examples</h2>
+<p>Each directory is a standalone application with its own manifest, lockfile, and
+instructions. No shared example helpers are required. The connection, query,
+batch-insert, and types examples have been built and run with Crystal 1.21.0
+against ClickHouse 26.8.31.2 LTS.</p>
+<ul>
+<li><a href="examples/connection/README.md">Connection</a>: connect, authenticate, and ping.</li>
+<li><a href="examples/query/README.md">Query</a>: typed parameters and row streaming.</li>
+<li><a href="examples/batch_insert/README.md">Batch insert</a>: temporary table, multiple binary batches, and read-back.</li>
+<li><a href="examples/types/README.md">Types</a>: exact decimals/timestamps, binary strings, UUIDs, and composites.</li>
+<li><a href="examples/kemal_api/README.md">Kemal API</a>: bulk OpenRTB bid-request ingestion at
+<code>POST /ortb/bids/bulk</code>, with paginated listing and UTC date/time filters at
+<code>GET /ortb/bids</code>. Includes handler injection, repositories, database setup,
+Docker, and HTTP/persistence specs.</li>
+<li><a href="examples/kemal_api/benchmark/README.md">Local insert benchmark</a>: one million
+randomized OpenRTB records per row/columnar mode, in 10,000-record INSERTs,
+with real Docker persistence checks. Run explicitly; CI excludes this workload.</li>
+</ul>
+<pre><code class="language-sh">cd examples/query
+shards install
+shards build
+CLICKHOUSE_URL='clickhouse://default:clickhouse_test@127.0.0.1:19000/default' ./bin/example</code></pre>
+<h2><a id="development" class="anchor" href="#development">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>Development</h2>
+<pre><code class="language-sh">shards install
+shards build ameba
+git config core.hooksPath .githooks
+.githooks/pre-commit</code></pre>
+<p>Enable the hook once per clone. It checks formatting, runs Ameba, type-checks the
+library, generates API documentation, and runs local specs in random order before
+each commit. Run <code>.githooks/pre-commit</code> manually to perform the same checks.
+Installed example dependencies are excluded from formatting.</p>
+<p>The <a href="docs/index.html">API reference</a> is generated with
+<code>crystal docs src/clickhouse.cr -o docs --project-version=main-dev --source-refname=main</code>.
+The hook normalizes trailing whitespace and stops when generated files need
+review. Stage the updated <code>docs/</code> along with source changes before committing.</p>
+<p>With <code>kcov</code> installed, run <code>make coverage</code> to build the debug spec runner and
+collect source coverage in <code>coverage/index.html</code>. Coverage runs local specs;
+CI builds kcov 43 on Ubuntu 24.04 and uploads the report as <code>coverage-report</code>.
+No minimum coverage percentage is enforced. kcov requires process-tracing
+permissions; use the CI artifact when local tracing is restricted.</p>
+<p>Real-server specs are opt-in. The Docker configuration pins ClickHouse
+<strong>26.8.31.2 LTS</strong> and <strong>26.9.22.3 stable</strong> by image digest and exposes loopback TCP
+ports <code>19000</code>/<code>29000</code> and TLS ports <code>19440</code>/<code>29440</code>.</p>
+<pre><code class="language-sh">./scripts/generate-test-certs.sh
+docker compose up -d --wait
+CLICKHOUSE_INTEGRATION=1 \
+  CLICKHOUSE_URL='clickhouse://default:clickhouse_test@127.0.0.1:19000/default' \
+  CLICKHOUSE_COMPRESSION=lz4 crystal spec spec/integration</code></pre>
+<p>For verified TLS coverage, also provide <code>CLICKHOUSE_TLS_URL</code> with the
+<code>clickhouses://</code> scheme and <code>CLICKHOUSE_TLS_CA=spec/fixtures/tls/ca.crt</code>.
+The integration fixtures use disposable tables and verify authentication,
+query/insert sequencing, streaming, deadlines, and TLS trust failures.</p>
+<h2><a id="license" class="anchor" href="#license">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>License</h2>
+<p>MIT. CityHash attribution is included in <a href="THIRD_PARTY_NOTICES.md">THIRD_PARTY_NOTICES.md</a>.</p>
+</div>
+</body>
+</html>

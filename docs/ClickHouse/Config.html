@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Crystal Docs 1.18.2">
+<meta name="crystal_docs.project_version" content="main-dev">
+<meta name="crystal_docs.project_name" content="clickhouse">
+
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/doc.js"></script>
+
+  <meta name="repository-name" content="clickhouse">
+  <title>ClickHouse::Config - clickhouse main-dev</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "../";
+  </script>
+</head>
+<body>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill="currentColor" fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+<input type="checkbox" id="sidebar-btn">
+<label for="sidebar-btn" id="sidebar-btn-label">
+  <svg class="open" xmlns="http://www.w3.org/2000/svg" height="2em" width="2em" viewBox="0 0 512 512"><title>Open Sidebar</title><path fill="currentColor" d="M80 96v64h352V96H80zm0 112v64h352v-64H80zm0 112v64h352v-64H80z"></path></svg>
+  <svg class="close" xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 512 512"><title>Close Sidebar</title><path fill="currentColor" d="m118.6 73.4-45.2 45.2L210.7 256 73.4 393.4l45.2 45.2L256 301.3l137.4 137.3 45.2-45.2L301.3 256l137.3-137.4-45.2-45.2L256 210.7Z"></path></svg>
+</label>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="../index.html">
+          clickhouse
+        </a>
+      </h1>
+
+      <span class="project-version">
+        main-dev
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+
+  <li class="parent open current" data-id="clickhouse/ClickHouse" data-name="clickhouse">
+      <a href="../ClickHouse.html">ClickHouse</a>
+
+        <ul>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Batch" data-name="clickhouse::batch">
+      <a href="../ClickHouse/Batch.html">Batch</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Block" data-name="clickhouse::block">
+      <a href="../ClickHouse/Block.html">Block</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/BusyError" data-name="clickhouse::busyerror">
+      <a href="../ClickHouse/BusyError.html">BusyError</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Client" data-name="clickhouse::client">
+      <a href="../ClickHouse/Client.html">Client</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/ClosedError" data-name="clickhouse::closederror">
+      <a href="../ClickHouse/ClosedError.html">ClosedError</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/CodecError" data-name="clickhouse::codecerror">
+      <a href="../ClickHouse/CodecError.html">CodecError</a>
+
+    </li>
+
+  <li class="parent " data-id="clickhouse/ClickHouse/Codecs" data-name="clickhouse::codecs">
+      <a href="../ClickHouse/Codecs.html">Codecs</a>
+
+        <ul>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Codecs/BlockCodec" data-name="clickhouse::codecs::blockcodec">
+      <a href="../ClickHouse/Codecs/BlockCodec.html">BlockCodec</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Codecs/ColumnCodec" data-name="clickhouse::codecs::columncodec">
+      <a href="../ClickHouse/Codecs/ColumnCodec.html">ColumnCodec</a>
+
+    </li>
+
+</ul>
+
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Column" data-name="clickhouse::column">
+      <a href="../ClickHouse/Column.html">Column</a>
+
+    </li>
+
+  <li class="parent " data-id="clickhouse/ClickHouse/Compression" data-name="clickhouse::compression">
+      <a href="../ClickHouse/Compression.html">Compression</a>
+
+        <ul>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Compression/CityHash" data-name="clickhouse::compression::cityhash">
+      <a href="../ClickHouse/Compression/CityHash.html">CityHash</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Compression/Error" data-name="clickhouse::compression::error">
+      <a href="../ClickHouse/Compression/Error.html">Error</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Compression/LZ4" data-name="clickhouse::compression::lz4">
+      <a href="../ClickHouse/Compression/LZ4.html">LZ4</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Compression/Reader" data-name="clickhouse::compression::reader">
+      <a href="../ClickHouse/Compression/Reader.html">Reader</a>
+
+    </li>
+
+</ul>
+
+
+    </li>
+
+  <li class=" current" data-id="clickhouse/ClickHouse/Config" data-name="clickhouse::config">
+      <a href="../ClickHouse/Config.html">Config</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Connection" data-name="clickhouse::connection">
+      <a href="../ClickHouse/Connection.html">Connection</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/ConnectionError" data-name="clickhouse::connectionerror">
+      <a href="../ClickHouse/ConnectionError.html">ConnectionError</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/DateValue" data-name="clickhouse::datevalue">
+      <a href="../ClickHouse/DateValue.html">DateValue</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Decimal" data-name="clickhouse::decimal">
+      <a href="../ClickHouse/Decimal.html">Decimal</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/EnumValue" data-name="clickhouse::enumvalue">
+      <a href="../ClickHouse/EnumValue.html">EnumValue</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Error" data-name="clickhouse::error">
+      <a href="../ClickHouse/Error.html">Error</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/InsertOutcomeUnknown" data-name="clickhouse::insertoutcomeunknown">
+      <a href="../ClickHouse/InsertOutcomeUnknown.html">InsertOutcomeUnknown</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/IPv4" data-name="clickhouse::ipv4">
+      <a href="../ClickHouse/IPv4.html">IPv4</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/IPv6" data-name="clickhouse::ipv6">
+      <a href="../ClickHouse/IPv6.html">IPv6</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/MapValue" data-name="clickhouse::mapvalue">
+      <a href="../ClickHouse/MapValue.html">MapValue</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Progress" data-name="clickhouse::progress">
+      <a href="../ClickHouse/Progress.html">Progress</a>
+
+    </li>
+
+  <li class="parent " data-id="clickhouse/ClickHouse/Protocol" data-name="clickhouse::protocol">
+      <a href="../ClickHouse/Protocol.html">Protocol</a>
+
+        <ul>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Protocol/Deadline" data-name="clickhouse::protocol::deadline">
+      <a href="../ClickHouse/Protocol/Deadline.html">Deadline</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Protocol/Parameters" data-name="clickhouse::protocol::parameters">
+      <a href="../ClickHouse/Protocol/Parameters.html">Parameters</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Protocol/QueryPacket" data-name="clickhouse::protocol::querypacket">
+      <a href="../ClickHouse/Protocol/QueryPacket.html">QueryPacket</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Protocol/Reader" data-name="clickhouse::protocol::reader">
+      <a href="../ClickHouse/Protocol/Reader.html">Reader</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Protocol/Writer" data-name="clickhouse::protocol::writer">
+      <a href="../ClickHouse/Protocol/Writer.html">Writer</a>
+
+    </li>
+
+</ul>
+
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/ProtocolError" data-name="clickhouse::protocolerror">
+      <a href="../ClickHouse/ProtocolError.html">ProtocolError</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/QueryTimeoutError" data-name="clickhouse::querytimeouterror">
+      <a href="../ClickHouse/QueryTimeoutError.html">QueryTimeoutError</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Result" data-name="clickhouse::result">
+      <a href="../ClickHouse/Result.html">Result</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Row" data-name="clickhouse::row">
+      <a href="../ClickHouse/Row.html">Row</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/ServerError" data-name="clickhouse::servererror">
+      <a href="../ClickHouse/ServerError.html">ServerError</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/ServerInfo" data-name="clickhouse::serverinfo">
+      <a href="../ClickHouse/ServerInfo.html">ServerInfo</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Summary" data-name="clickhouse::summary">
+      <a href="../ClickHouse/Summary.html">Summary</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Timestamp" data-name="clickhouse::timestamp">
+      <a href="../ClickHouse/Timestamp.html">Timestamp</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Transport" data-name="clickhouse::transport">
+      <a href="../ClickHouse/Transport.html">Transport</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/TupleValue" data-name="clickhouse::tuplevalue">
+      <a href="../ClickHouse/TupleValue.html">TupleValue</a>
+
+    </li>
+
+  <li class="parent " data-id="clickhouse/ClickHouse/Types" data-name="clickhouse::types">
+      <a href="../ClickHouse/Types.html">Types</a>
+
+        <ul>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Types/Parser" data-name="clickhouse::types::parser">
+      <a href="../ClickHouse/Types/Parser.html">Parser</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Types/Type" data-name="clickhouse::types::type">
+      <a href="../ClickHouse/Types/Type.html">Type</a>
+
+    </li>
+
+</ul>
+
+
+    </li>
+
+  <li class="parent " data-id="clickhouse/ClickHouse/Value" data-name="clickhouse::value">
+      <a href="../ClickHouse/Value.html">Value</a>
+
+        <ul>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Value/Data" data-name="clickhouse::value::data">
+      <a href="../ClickHouse/Value/Data.html">Data</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Value/Integer" data-name="clickhouse::value::integer">
+      <a href="../ClickHouse/Value/Integer.html">Integer</a>
+
+    </li>
+
+</ul>
+
+
+    </li>
+
+</ul>
+
+
+    </li>
+
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">
+    struct
+  </span> ClickHouse::<wbr>Config
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../ClickHouse/Config.html">ClickHouse::Config</a></li><li class="superclass">Struct</li><li class="superclass">Value</li><li class="superclass">Object</li></ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+
+
+      <a href="https://github.com/shardscry/clickhouse/blob/main/src/clickhouse/config.cr#L4" target="_blank">
+        clickhouse/config.cr
+      </a>
+
+    <br/>
+
+
+
+
+
+
+
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
+  <ul class="list-summary">
+
+      <li class="entry-summary">
+        <a href="#from_string%28value%3AString%2C%2A%2Ctls_ca%3AString%7CNil%3Dnil%2Ctls_hostname%3AString%7CNil%3Dnil%2Ctls_verify%3ABool%7CNil%3Dnil%2Ccompression%3ASymbol%7CNil%3Dnil%2C%2A%2Aoptions%29%3Aself-class-method" class="signature"><strong>.from_string</strong>(value : String, *, tls_ca : String | Nil = <span class="n">nil</span>, tls_hostname : String | Nil = <span class="n">nil</span>, tls_verify : Bool | Nil = <span class="n">nil</span>, compression : Symbol | Nil = <span class="n">nil</span>, **options) : <span class="k">self</span></a>
+
+      </li>
+
+      <li class="entry-summary">
+        <a href="#new%28host%3AString%3D%22127.0.0.1%22%2Cport%3AInt32%3D9000%2Cdatabase%3AString%3D%22default%22%2Cusername%3AString%3D%22default%22%2Cpassword%3AString%3D%22%22%2Ctls%3ABool%3Dfalse%2Ctls_verify%3ABool%3Dtrue%2Ctls_ca%3AString%7CNil%3Dnil%2Ctls_hostname%3AString%7CNil%3Dnil%2Ccompression%3ASymbol%3D%3Anone%2Cconnect_timeout%3ATime%3A%3ASpan%3D5.seconds%2Cread_timeout%3ATime%3A%3ASpan%3D30.seconds%2Cwrite_timeout%3ATime%3A%3ASpan%3D30.seconds%2Cquery_timeout%3ATime%3A%3ASpan%3D30.seconds%2Cbatch_size%3AInt32%3D1000%2Cbatch_bytes%3AInt32%3D%288%2A1024%29%2A1024%2Cmax_result_rows%3AInt32%3D1000000%2Cmax_result_bytes%3AInt32%3D%2864%2A1024%29%2A1024%29-class-method" class="signature"><strong>.new</strong>(host : String = <span class="s">&quot;127.0.0.1&quot;</span>, port : Int32 = <span class="n">9000</span>, database : String = <span class="s">&quot;default&quot;</span>, username : String = <span class="s">&quot;default&quot;</span>, password : String = <span class="s">&quot;&quot;</span>, tls : Bool = <span class="n">false</span>, tls_verify : Bool = <span class="n">true</span>, tls_ca : String | Nil = <span class="n">nil</span>, tls_hostname : String | Nil = <span class="n">nil</span>, compression : Symbol = <span class="n">:none</span>, connect_timeout : Time::Span = <span class="n">5</span>.seconds, read_timeout : Time::Span = <span class="n">30</span>.seconds, write_timeout : Time::Span = <span class="n">30</span>.seconds, query_timeout : Time::Span = <span class="n">30</span>.seconds, batch_size : Int32 = <span class="n">1000</span>, batch_bytes : Int32 = (<span class="n">8</span> <span class="o">*</span> <span class="n">1024</span>) <span class="o">*</span> <span class="n">1024</span>, max_result_rows : Int32 = <span class="n">1000000</span>, max_result_bytes : Int32 = (<span class="n">64</span> <span class="o">*</span> <span class="n">1024</span>) <span class="o">*</span> <span class="n">1024</span>)</a>
+
+      </li>
+
+  </ul>
+
+
+
+
+
+
+
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+
+      <li class="entry-summary">
+        <a href="#batch_bytes%3AInt32-instance-method" class="signature"><strong>#batch_bytes</strong> : Int32</a>
+
+      </li>
+
+      <li class="entry-summary">
+        <a href="#batch_size%3AInt32-instance-method" class="signature"><strong>#batch_size</strong> : Int32</a>
+
+      </li>
+
+      <li class="entry-summary">
+        <a href="#compression%3ASymbol-instance-method" class="signature"><strong>#compression</strong> : Symbol</a>
+
+      </li>
+
+      <li class="entry-summary">
+        <a href="#connect_timeout%3ATime%3A%3ASpan-instance-method" class="signature"><strong>#connect_timeout</strong> : Time::Span</a>
+
+      </li>
+
+      <li class="entry-summary">
+        <a href="#database%3AString-instance-method" class="signature"><strong>#database</strong> : String</a>
+
+      </li>
+
+      <li class="entry-summary">
+        <a href="#host%3AString-instance-method" class="signature"><strong>#host</strong> : String</a>
+
+      </li>
+
+      <li class="entry-summary">
+        <a href="#inspect%28io%3AIO%29%3ANil-instance-method" class="signature"><strong>#inspect</strong>(io : IO) : Nil</a>
+
+          <div class="summary"><p>Appends this struct's name and instance variables names and values to the given IO.</p></div>
+
+      </li>
+
+      <li class="entry-summary">
+        <a href="#max_result_bytes%3AInt32-instance-method" class="signature"><strong>#max_result_bytes</strong> : Int32</a>
+
+      </li>
+
+      <li class="entry-summary">
+        <a href="#max_result_rows%3AInt32-instance-method" class="signature"><strong>#max_result_rows</strong> : Int32</a>
+
+      </li>
+
+      <li class="entry-summary">
+        <a href="#password%3AString-instance-method" class="signature"><strong>#password</strong> : String</a>
+
+      </li>
+
+      <li class="entry-summary">
+        <a href="#port%3AInt32-instance-method" class="signature"><strong>#port</strong> : Int32</a>
+
+      </li>
+
+      <li class="entry-summary">
+        <a href="#query_timeout%3ATime%3A%3ASpan-instance-method" class="signature"><strong>#query_timeout</strong> : Time::Span</a>
+
+      </li>
+
+      <li class="entry-summary">
+        <a href="#read_timeout%3ATime%3A%3ASpan-instance-method" class="signature"><strong>#read_timeout</strong> : Time::Span</a>
+
+      </li>
+
+      <li class="entry-summary">
+        <a href="#tls%3F%3ABool-instance-method" class="signature"><strong>#tls?</strong> : Bool</a>
+
+      </li>
+
+      <li class="entry-summary">
+        <a href="#tls_ca%3AString%7CNil-instance-method" class="signature"><strong>#tls_ca</strong> : String | Nil</a>
+
+      </li>
+
+      <li class="entry-summary">
+        <a href="#tls_hostname%3AString%7CNil-instance-method" class="signature"><strong>#tls_hostname</strong> : String | Nil</a>
+
+      </li>
+
+      <li class="entry-summary">
+        <a href="#tls_verify%3F%3ABool-instance-method" class="signature"><strong>#tls_verify?</strong> : Bool</a>
+
+      </li>
+
+      <li class="entry-summary">
+        <a href="#to_s%28io%3AIO%29%3ANil-instance-method" class="signature"><strong>#to_s</strong>(io : IO) : Nil</a>
+
+          <div class="summary"><p>Same as <code><a href="../ClickHouse/Config.html#inspect%28io%3AIO%29%3ANil-instance-method">#inspect(io)</a></code>.</p></div>
+
+      </li>
+
+      <li class="entry-summary">
+        <a href="#username%3AString-instance-method" class="signature"><strong>#username</strong> : String</a>
+
+      </li>
+
+      <li class="entry-summary">
+        <a href="#write_timeout%3ATime%3A%3ASpan-instance-method" class="signature"><strong>#write_timeout</strong> : Time::Span</a>
+
+      </li>
+
+  </ul>
+
+
+
+  <div class="methods-inherited">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
+
+    <div class="entry-detail" id="from_string(value:String,*,tls_ca:String|Nil=nil,tls_hostname:String|Nil=nil,tls_verify:Bool|Nil=nil,compression:Symbol|Nil=nil,**options):self-class-method">
+      <div class="signature">
+
+        def self.<strong>from_string</strong>(value : String, *, tls_ca : String | Nil = <span class="n">nil</span>, tls_hostname : String | Nil = <span class="n">nil</span>, tls_verify : Bool | Nil = <span class="n">nil</span>, compression : Symbol | Nil = <span class="n">nil</span>, **options) : <span class="k">self</span>
+
+        <a class="method-permalink" href="#from_string%28value%3AString%2C%2A%2Ctls_ca%3AString%7CNil%3Dnil%2Ctls_hostname%3AString%7CNil%3Dnil%2Ctls_verify%3ABool%7CNil%3Dnil%2Ccompression%3ASymbol%7CNil%3Dnil%2C%2A%2Aoptions%29%3Aself-class-method">#</a>
+      </div>
+
+      <br/>
+      <div>
+
+          [<a href="https://github.com/shardscry/clickhouse/blob/main/src/clickhouse/config.cr#L57" target="_blank">View source</a>]
+
+      </div>
+    </div>
+
+    <div class="entry-detail" id="new(host:String=&quot;127.0.0.1&quot;,port:Int32=9000,database:String=&quot;default&quot;,username:String=&quot;default&quot;,password:String=&quot;&quot;,tls:Bool=false,tls_verify:Bool=true,tls_ca:String|Nil=nil,tls_hostname:String|Nil=nil,compression:Symbol=:none,connect_timeout:Time::Span=5.seconds,read_timeout:Time::Span=30.seconds,write_timeout:Time::Span=30.seconds,query_timeout:Time::Span=30.seconds,batch_size:Int32=1000,batch_bytes:Int32=(8*1024)*1024,max_result_rows:Int32=1000000,max_result_bytes:Int32=(64*1024)*1024)-class-method">
+      <div class="signature">
+
+        def self.<strong>new</strong>(host : String = <span class="s">&quot;127.0.0.1&quot;</span>, port : Int32 = <span class="n">9000</span>, database : String = <span class="s">&quot;default&quot;</span>, username : String = <span class="s">&quot;default&quot;</span>, password : String = <span class="s">&quot;&quot;</span>, tls : Bool = <span class="n">false</span>, tls_verify : Bool = <span class="n">true</span>, tls_ca : String | Nil = <span class="n">nil</span>, tls_hostname : String | Nil = <span class="n">nil</span>, compression : Symbol = <span class="n">:none</span>, connect_timeout : Time::Span = <span class="n">5</span>.seconds, read_timeout : Time::Span = <span class="n">30</span>.seconds, write_timeout : Time::Span = <span class="n">30</span>.seconds, query_timeout : Time::Span = <span class="n">30</span>.seconds, batch_size : Int32 = <span class="n">1000</span>, batch_bytes : Int32 = (<span class="n">8</span> <span class="o">*</span> <span class="n">1024</span>) <span class="o">*</span> <span class="n">1024</span>, max_result_rows : Int32 = <span class="n">1000000</span>, max_result_bytes : Int32 = (<span class="n">64</span> <span class="o">*</span> <span class="n">1024</span>) <span class="o">*</span> <span class="n">1024</span>)
+
+        <a class="method-permalink" href="#new%28host%3AString%3D%22127.0.0.1%22%2Cport%3AInt32%3D9000%2Cdatabase%3AString%3D%22default%22%2Cusername%3AString%3D%22default%22%2Cpassword%3AString%3D%22%22%2Ctls%3ABool%3Dfalse%2Ctls_verify%3ABool%3Dtrue%2Ctls_ca%3AString%7CNil%3Dnil%2Ctls_hostname%3AString%7CNil%3Dnil%2Ccompression%3ASymbol%3D%3Anone%2Cconnect_timeout%3ATime%3A%3ASpan%3D5.seconds%2Cread_timeout%3ATime%3A%3ASpan%3D30.seconds%2Cwrite_timeout%3ATime%3A%3ASpan%3D30.seconds%2Cquery_timeout%3ATime%3A%3ASpan%3D30.seconds%2Cbatch_size%3AInt32%3D1000%2Cbatch_bytes%3AInt32%3D%288%2A1024%29%2A1024%2Cmax_result_rows%3AInt32%3D1000000%2Cmax_result_bytes%3AInt32%3D%2864%2A1024%29%2A1024%29-class-method">#</a>
+      </div>
+
+      <br/>
+      <div>
+
+          [<a href="https://github.com/shardscry/clickhouse/blob/main/src/clickhouse/config.cr#L24" target="_blank">View source</a>]
+
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+
+    <div class="entry-detail" id="batch_bytes:Int32-instance-method">
+      <div class="signature">
+
+        def <strong>batch_bytes</strong> : Int32
+
+        <a class="method-permalink" href="#batch_bytes%3AInt32-instance-method">#</a>
+      </div>
+
+      <br/>
+      <div>
+
+          [<a href="https://github.com/shardscry/clickhouse/blob/main/src/clickhouse/config.cr#L20" target="_blank">View source</a>]
+
+      </div>
+    </div>
+
+    <div class="entry-detail" id="batch_size:Int32-instance-method">
+      <div class="signature">
+
+        def <strong>batch_size</strong> : Int32
+
+        <a class="method-permalink" href="#batch_size%3AInt32-instance-method">#</a>
+      </div>
+
+      <br/>
+      <div>
+
+          [<a href="https://github.com/shardscry/clickhouse/blob/main/src/clickhouse/config.cr#L19" target="_blank">View source</a>]
+
+      </div>
+    </div>
+
+    <div class="entry-detail" id="compression:Symbol-instance-method">
+      <div class="signature">
+
+        def <strong>compression</strong> : Symbol
+
+        <a class="method-permalink" href="#compression%3ASymbol-instance-method">#</a>
+      </div>
+
+      <br/>
+      <div>
+
+          [<a href="https://github.com/shardscry/clickhouse/blob/main/src/clickhouse/config.cr#L14" target="_blank">View source</a>]
+
+      </div>
+    </div>
+
+    <div class="entry-detail" id="connect_timeout:Time::Span-instance-method">
+      <div class="signature">
+
+        def <strong>connect_timeout</strong> : Time::Span
+
+        <a class="method-permalink" href="#connect_timeout%3ATime%3A%3ASpan-instance-method">#</a>
+      </div>
+
+      <br/>
+      <div>
+
+          [<a href="https://github.com/shardscry/clickhouse/blob/main/src/clickhouse/config.cr#L15" target="_blank">View source</a>]
+
+      </div>
+    </div>
+
+    <div class="entry-detail" id="database:String-instance-method">
+      <div class="signature">
+
+        def <strong>database</strong> : String
+
+        <a class="method-permalink" href="#database%3AString-instance-method">#</a>
+      </div>
+
+      <br/>
+      <div>
+
+          [<a href="https://github.com/shardscry/clickhouse/blob/main/src/clickhouse/config.cr#L7" target="_blank">View source</a>]
+
+      </div>
+    </div>
+
+    <div class="entry-detail" id="host:String-instance-method">
+      <div class="signature">
+
+        def <strong>host</strong> : String
+
+        <a class="method-permalink" href="#host%3AString-instance-method">#</a>
+      </div>
+
+      <br/>
+      <div>
+
+          [<a href="https://github.com/shardscry/clickhouse/blob/main/src/clickhouse/config.cr#L5" target="_blank">View source</a>]
+
+      </div>
+    </div>
+
+    <div class="entry-detail" id="inspect(io:IO):Nil-instance-method">
+      <div class="signature">
+
+        def <strong>inspect</strong>(io : IO) : Nil
+
+        <a class="method-permalink" href="#inspect%28io%3AIO%29%3ANil-instance-method">#</a>
+      </div>
+
+        <div class="doc">
+
+            <div class="doc-inherited">
+              Description copied from struct Struct
+            </div>
+
+          <p>Appends this struct's name and instance variables names and values
+to the given IO.</p>
+<pre><code class="language-crystal"><span class="k">struct</span> <span class="t">Point</span>
+  <span class="k">def</span> <span class="m">initialize</span>(@x : <span class="t">Int32</span>, @y : <span class="t">Int32</span>)
+  <span class="k">end</span>
+<span class="k">end</span>
+
+p1 <span class="o">=</span> <span class="t">Point</span>.new <span class="n">1</span>, <span class="n">2</span>
+p1.to_s    <span class="c"># &quot;Point(@x=1, @y=2)&quot;</span>
+p1.inspect <span class="c"># &quot;Point(@x=1, @y=2)&quot;</span></code></pre>
+        </div>
+
+      <br/>
+      <div>
+
+          [<a href="https://github.com/shardscry/clickhouse/blob/main/src/clickhouse/config.cr#L124" target="_blank">View source</a>]
+
+      </div>
+    </div>
+
+    <div class="entry-detail" id="max_result_bytes:Int32-instance-method">
+      <div class="signature">
+
+        def <strong>max_result_bytes</strong> : Int32
+
+        <a class="method-permalink" href="#max_result_bytes%3AInt32-instance-method">#</a>
+      </div>
+
+      <br/>
+      <div>
+
+          [<a href="https://github.com/shardscry/clickhouse/blob/main/src/clickhouse/config.cr#L22" target="_blank">View source</a>]
+
+      </div>
+    </div>
+
+    <div class="entry-detail" id="max_result_rows:Int32-instance-method">
+      <div class="signature">
+
+        def <strong>max_result_rows</strong> : Int32
+
+        <a class="method-permalink" href="#max_result_rows%3AInt32-instance-method">#</a>
+      </div>
+
+      <br/>
+      <div>
+
+          [<a href="https://github.com/shardscry/clickhouse/blob/main/src/clickhouse/config.cr#L21" target="_blank">View source</a>]
+
+      </div>
+    </div>
+
+    <div class="entry-detail" id="password:String-instance-method">
+      <div class="signature">
+
+        def <strong>password</strong> : String
+
+        <a class="method-permalink" href="#password%3AString-instance-method">#</a>
+      </div>
+
+      <br/>
+      <div>
+
+          [<a href="https://github.com/shardscry/clickhouse/blob/main/src/clickhouse/config.cr#L9" target="_blank">View source</a>]
+
+      </div>
+    </div>
+
+    <div class="entry-detail" id="port:Int32-instance-method">
+      <div class="signature">
+
+        def <strong>port</strong> : Int32
+
+        <a class="method-permalink" href="#port%3AInt32-instance-method">#</a>
+      </div>
+
+      <br/>
+      <div>
+
+          [<a href="https://github.com/shardscry/clickhouse/blob/main/src/clickhouse/config.cr#L6" target="_blank">View source</a>]
+
+      </div>
+    </div>
+
+    <div class="entry-detail" id="query_timeout:Time::Span-instance-method">
+      <div class="signature">
+
+        def <strong>query_timeout</strong> : Time::Span
+
+        <a class="method-permalink" href="#query_timeout%3ATime%3A%3ASpan-instance-method">#</a>
+      </div>
+
+      <br/>
+      <div>
+
+          [<a href="https://github.com/shardscry/clickhouse/blob/main/src/clickhouse/config.cr#L18" target="_blank">View source</a>]
+
+      </div>
+    </div>
+
+    <div class="entry-detail" id="read_timeout:Time::Span-instance-method">
+      <div class="signature">
+
+        def <strong>read_timeout</strong> : Time::Span
+
+        <a class="method-permalink" href="#read_timeout%3ATime%3A%3ASpan-instance-method">#</a>
+      </div>
+
+      <br/>
+      <div>
+
+          [<a href="https://github.com/shardscry/clickhouse/blob/main/src/clickhouse/config.cr#L16" target="_blank">View source</a>]
+
+      </div>
+    </div>
+
+    <div class="entry-detail" id="tls?:Bool-instance-method">
+      <div class="signature">
+
+        def <strong>tls?</strong> : Bool
+
+        <a class="method-permalink" href="#tls%3F%3ABool-instance-method">#</a>
+      </div>
+
+      <br/>
+      <div>
+
+          [<a href="https://github.com/shardscry/clickhouse/blob/main/src/clickhouse/config.cr#L10" target="_blank">View source</a>]
+
+      </div>
+    </div>
+
+    <div class="entry-detail" id="tls_ca:String|Nil-instance-method">
+      <div class="signature">
+
+        def <strong>tls_ca</strong> : String | Nil
+
+        <a class="method-permalink" href="#tls_ca%3AString%7CNil-instance-method">#</a>
+      </div>
+
+      <br/>
+      <div>
+
+          [<a href="https://github.com/shardscry/clickhouse/blob/main/src/clickhouse/config.cr#L12" target="_blank">View source</a>]
+
+      </div>
+    </div>
+
+    <div class="entry-detail" id="tls_hostname:String|Nil-instance-method">
+      <div class="signature">
+
+        def <strong>tls_hostname</strong> : String | Nil
+
+        <a class="method-permalink" href="#tls_hostname%3AString%7CNil-instance-method">#</a>
+      </div>
+
+      <br/>
+      <div>
+
+          [<a href="https://github.com/shardscry/clickhouse/blob/main/src/clickhouse/config.cr#L13" target="_blank">View source</a>]
+
+      </div>
+    </div>
+
+    <div class="entry-detail" id="tls_verify?:Bool-instance-method">
+      <div class="signature">
+
+        def <strong>tls_verify?</strong> : Bool
+
+        <a class="method-permalink" href="#tls_verify%3F%3ABool-instance-method">#</a>
+      </div>
+
+      <br/>
+      <div>
+
+          [<a href="https://github.com/shardscry/clickhouse/blob/main/src/clickhouse/config.cr#L11" target="_blank">View source</a>]
+
+      </div>
+    </div>
+
+    <div class="entry-detail" id="to_s(io:IO):Nil-instance-method">
+      <div class="signature">
+
+        def <strong>to_s</strong>(io : IO) : Nil
+
+        <a class="method-permalink" href="#to_s%28io%3AIO%29%3ANil-instance-method">#</a>
+      </div>
+
+        <div class="doc">
+
+            <div class="doc-inherited">
+              Description copied from struct Struct
+            </div>
+
+          <p>Same as <code><a href="../ClickHouse/Config.html#inspect%28io%3AIO%29%3ANil-instance-method">#inspect(io)</a></code>.</p>
+        </div>
+
+      <br/>
+      <div>
+
+          [<a href="https://github.com/shardscry/clickhouse/blob/main/src/clickhouse/config.cr#L129" target="_blank">View source</a>]
+
+      </div>
+    </div>
+
+    <div class="entry-detail" id="username:String-instance-method">
+      <div class="signature">
+
+        def <strong>username</strong> : String
+
+        <a class="method-permalink" href="#username%3AString-instance-method">#</a>
+      </div>
+
+      <br/>
+      <div>
+
+          [<a href="https://github.com/shardscry/clickhouse/blob/main/src/clickhouse/config.cr#L8" target="_blank">View source</a>]
+
+      </div>
+    </div>
+
+    <div class="entry-detail" id="write_timeout:Time::Span-instance-method">
+      <div class="signature">
+
+        def <strong>write_timeout</strong> : Time::Span
+
+        <a class="method-permalink" href="#write_timeout%3ATime%3A%3ASpan-instance-method">#</a>
+      </div>
+
+      <br/>
+      <div>
+
+          [<a href="https://github.com/shardscry/clickhouse/blob/main/src/clickhouse/config.cr#L17" target="_blank">View source</a>]
+
+      </div>
+    </div>
+
+
+
+
+</div>
+
+</body>
+</html>

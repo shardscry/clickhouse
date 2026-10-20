@@ -1,5 +1,13 @@
 # Changelog
 
+## Unreleased
+
+### Added
+
+- Generate the API reference in `docs/` during pre-commit checks and require
+  generated changes to be reviewed and staged.
+- Add `make coverage` and a CI job using kcov 43 to publish local-spec coverage.
+
 ## 0.0.1
 
 ### Changed

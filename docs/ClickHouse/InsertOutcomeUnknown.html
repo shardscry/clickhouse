@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Crystal Docs 1.18.2">
+<meta name="crystal_docs.project_version" content="main-dev">
+<meta name="crystal_docs.project_name" content="clickhouse">
+
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/doc.js"></script>
+
+  <meta name="repository-name" content="clickhouse">
+  <title>ClickHouse::InsertOutcomeUnknown - clickhouse main-dev</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "../";
+  </script>
+</head>
+<body>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill="currentColor" fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+<input type="checkbox" id="sidebar-btn">
+<label for="sidebar-btn" id="sidebar-btn-label">
+  <svg class="open" xmlns="http://www.w3.org/2000/svg" height="2em" width="2em" viewBox="0 0 512 512"><title>Open Sidebar</title><path fill="currentColor" d="M80 96v64h352V96H80zm0 112v64h352v-64H80zm0 112v64h352v-64H80z"></path></svg>
+  <svg class="close" xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 512 512"><title>Close Sidebar</title><path fill="currentColor" d="m118.6 73.4-45.2 45.2L210.7 256 73.4 393.4l45.2 45.2L256 301.3l137.4 137.3 45.2-45.2L301.3 256l137.3-137.4-45.2-45.2L256 210.7Z"></path></svg>
+</label>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="../index.html">
+          clickhouse
+        </a>
+      </h1>
+
+      <span class="project-version">
+        main-dev
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+
+  <li class="parent open current" data-id="clickhouse/ClickHouse" data-name="clickhouse">
+      <a href="../ClickHouse.html">ClickHouse</a>
+
+        <ul>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Batch" data-name="clickhouse::batch">
+      <a href="../ClickHouse/Batch.html">Batch</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Block" data-name="clickhouse::block">
+      <a href="../ClickHouse/Block.html">Block</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/BusyError" data-name="clickhouse::busyerror">
+      <a href="../ClickHouse/BusyError.html">BusyError</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Client" data-name="clickhouse::client">
+      <a href="../ClickHouse/Client.html">Client</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/ClosedError" data-name="clickhouse::closederror">
+      <a href="../ClickHouse/ClosedError.html">ClosedError</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/CodecError" data-name="clickhouse::codecerror">
+      <a href="../ClickHouse/CodecError.html">CodecError</a>
+
+    </li>
+
+  <li class="parent " data-id="clickhouse/ClickHouse/Codecs" data-name="clickhouse::codecs">
+      <a href="../ClickHouse/Codecs.html">Codecs</a>
+
+        <ul>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Codecs/BlockCodec" data-name="clickhouse::codecs::blockcodec">
+      <a href="../ClickHouse/Codecs/BlockCodec.html">BlockCodec</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Codecs/ColumnCodec" data-name="clickhouse::codecs::columncodec">
+      <a href="../ClickHouse/Codecs/ColumnCodec.html">ColumnCodec</a>
+
+    </li>
+
+</ul>
+
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Column" data-name="clickhouse::column">
+      <a href="../ClickHouse/Column.html">Column</a>
+
+    </li>
+
+  <li class="parent " data-id="clickhouse/ClickHouse/Compression" data-name="clickhouse::compression">
+      <a href="../ClickHouse/Compression.html">Compression</a>
+
+        <ul>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Compression/CityHash" data-name="clickhouse::compression::cityhash">
+      <a href="../ClickHouse/Compression/CityHash.html">CityHash</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Compression/Error" data-name="clickhouse::compression::error">
+      <a href="../ClickHouse/Compression/Error.html">Error</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Compression/LZ4" data-name="clickhouse::compression::lz4">
+      <a href="../ClickHouse/Compression/LZ4.html">LZ4</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Compression/Reader" data-name="clickhouse::compression::reader">
+      <a href="../ClickHouse/Compression/Reader.html">Reader</a>
+
+    </li>
+
+</ul>
+
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Config" data-name="clickhouse::config">
+      <a href="../ClickHouse/Config.html">Config</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Connection" data-name="clickhouse::connection">
+      <a href="../ClickHouse/Connection.html">Connection</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/ConnectionError" data-name="clickhouse::connectionerror">
+      <a href="../ClickHouse/ConnectionError.html">ConnectionError</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/DateValue" data-name="clickhouse::datevalue">
+      <a href="../ClickHouse/DateValue.html">DateValue</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Decimal" data-name="clickhouse::decimal">
+      <a href="../ClickHouse/Decimal.html">Decimal</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/EnumValue" data-name="clickhouse::enumvalue">
+      <a href="../ClickHouse/EnumValue.html">EnumValue</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Error" data-name="clickhouse::error">
+      <a href="../ClickHouse/Error.html">Error</a>
+
+    </li>
+
+  <li class=" current" data-id="clickhouse/ClickHouse/InsertOutcomeUnknown" data-name="clickhouse::insertoutcomeunknown">
+      <a href="../ClickHouse/InsertOutcomeUnknown.html">InsertOutcomeUnknown</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/IPv4" data-name="clickhouse::ipv4">
+      <a href="../ClickHouse/IPv4.html">IPv4</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/IPv6" data-name="clickhouse::ipv6">
+      <a href="../ClickHouse/IPv6.html">IPv6</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/MapValue" data-name="clickhouse::mapvalue">
+      <a href="../ClickHouse/MapValue.html">MapValue</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Progress" data-name="clickhouse::progress">
+      <a href="../ClickHouse/Progress.html">Progress</a>
+
+    </li>
+
+  <li class="parent " data-id="clickhouse/ClickHouse/Protocol" data-name="clickhouse::protocol">
+      <a href="../ClickHouse/Protocol.html">Protocol</a>
+
+        <ul>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Protocol/Deadline" data-name="clickhouse::protocol::deadline">
+      <a href="../ClickHouse/Protocol/Deadline.html">Deadline</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Protocol/Parameters" data-name="clickhouse::protocol::parameters">
+      <a href="../ClickHouse/Protocol/Parameters.html">Parameters</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Protocol/QueryPacket" data-name="clickhouse::protocol::querypacket">
+      <a href="../ClickHouse/Protocol/QueryPacket.html">QueryPacket</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Protocol/Reader" data-name="clickhouse::protocol::reader">
+      <a href="../ClickHouse/Protocol/Reader.html">Reader</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Protocol/Writer" data-name="clickhouse::protocol::writer">
+      <a href="../ClickHouse/Protocol/Writer.html">Writer</a>
+
+    </li>
+
+</ul>
+
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/ProtocolError" data-name="clickhouse::protocolerror">
+      <a href="../ClickHouse/ProtocolError.html">ProtocolError</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/QueryTimeoutError" data-name="clickhouse::querytimeouterror">
+      <a href="../ClickHouse/QueryTimeoutError.html">QueryTimeoutError</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Result" data-name="clickhouse::result">
+      <a href="../ClickHouse/Result.html">Result</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Row" data-name="clickhouse::row">
+      <a href="../ClickHouse/Row.html">Row</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/ServerError" data-name="clickhouse::servererror">
+      <a href="../ClickHouse/ServerError.html">ServerError</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/ServerInfo" data-name="clickhouse::serverinfo">
+      <a href="../ClickHouse/ServerInfo.html">ServerInfo</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Summary" data-name="clickhouse::summary">
+      <a href="../ClickHouse/Summary.html">Summary</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Timestamp" data-name="clickhouse::timestamp">
+      <a href="../ClickHouse/Timestamp.html">Timestamp</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Transport" data-name="clickhouse::transport">
+      <a href="../ClickHouse/Transport.html">Transport</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/TupleValue" data-name="clickhouse::tuplevalue">
+      <a href="../ClickHouse/TupleValue.html">TupleValue</a>
+
+    </li>
+
+  <li class="parent " data-id="clickhouse/ClickHouse/Types" data-name="clickhouse::types">
+      <a href="../ClickHouse/Types.html">Types</a>
+
+        <ul>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Types/Parser" data-name="clickhouse::types::parser">
+      <a href="../ClickHouse/Types/Parser.html">Parser</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Types/Type" data-name="clickhouse::types::type">
+      <a href="../ClickHouse/Types/Type.html">Type</a>
+
+    </li>
+
+</ul>
+
+
+    </li>
+
+  <li class="parent " data-id="clickhouse/ClickHouse/Value" data-name="clickhouse::value">
+      <a href="../ClickHouse/Value.html">Value</a>
+
+        <ul>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Value/Data" data-name="clickhouse::value::data">
+      <a href="../ClickHouse/Value/Data.html">Data</a>
+
+    </li>
+
+  <li class=" " data-id="clickhouse/ClickHouse/Value/Integer" data-name="clickhouse::value::integer">
+      <a href="../ClickHouse/Value/Integer.html">Integer</a>
+
+    </li>
+
+</ul>
+
+
+    </li>
+
+</ul>
+
+
+    </li>
+
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">
+    class
+  </span> ClickHouse::<wbr>InsertOutcomeUnknown
+
+</h1>
+
+
+  <ul class="superclass-hierarchy"><li class="superclass"><a href="../ClickHouse/InsertOutcomeUnknown.html">ClickHouse::InsertOutcomeUnknown</a></li><li class="superclass"><a href="../ClickHouse/ConnectionError.html">ClickHouse::ConnectionError</a></li><li class="superclass"><a href="../ClickHouse/Error.html">ClickHouse::Error</a></li><li class="superclass">Exception</li><li class="superclass">Reference</li><li class="superclass">Object</li></ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+
+
+      <a href="https://github.com/shardscry/clickhouse/blob/main/src/clickhouse/errors.cr#L21" target="_blank">
+        clickhouse/errors.cr
+      </a>
+
+    <br/>
+
+
+
+
+
+
+
+  <h2>
+    <a id="constructors" class="anchor" href="#constructors">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructors
+  </h2>
+  <ul class="list-summary">
+
+      <li class="entry-summary">
+        <a href="#new%28query_id%3AString%2Ccause%3AException%7CNil%3Dnil%29-class-method" class="signature"><strong>.new</strong>(query_id : String, cause : Exception | Nil = <span class="n">nil</span>)</a>
+
+      </li>
+
+  </ul>
+
+
+
+
+
+
+
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+
+      <li class="entry-summary">
+        <a href="#query_id%3AString-instance-method" class="signature"><strong>#query_id</strong> : String</a>
+
+      </li>
+
+  </ul>
+
+
+
+  <div class="methods-inherited">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+
+  <h2>
+    <a id="constructor-detail" class="anchor" href="#constructor-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Constructor Detail
+  </h2>
+
+    <div class="entry-detail" id="new(query_id:String,cause:Exception|Nil=nil)-class-method">
+      <div class="signature">
+
+        def self.<strong>new</strong>(query_id : String, cause : Exception | Nil = <span class="n">nil</span>)
+
+        <a class="method-permalink" href="#new%28query_id%3AString%2Ccause%3AException%7CNil%3Dnil%29-class-method">#</a>
+      </div>
+
+      <br/>
+      <div>
+
+          [<a href="https://github.com/shardscry/clickhouse/blob/main/src/clickhouse/errors.cr#L24" target="_blank">View source</a>]
+
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+
+    <div class="entry-detail" id="query_id:String-instance-method">
+      <div class="signature">
+
+        def <strong>query_id</strong> : String
+
+        <a class="method-permalink" href="#query_id%3AString-instance-method">#</a>
+      </div>
+
+      <br/>
+      <div>
+
+          [<a href="https://github.com/shardscry/clickhouse/blob/main/src/clickhouse/errors.cr#L22" target="_blank">View source</a>]
+
+      </div>
+    </div>
+
+
+
+
+</div>
+
+</body>
+</html>
