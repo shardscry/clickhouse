@@ -15,5 +15,5 @@ Requires Crystal 1.21.0. Set `CLICKHOUSE_TLS_CA` for a private CA when using a
 connection to avoid reusing an unread response.
 
 The standalone manifest installs `shardscry/clickhouse` from GitHub with
-`version: ~> 0.0.1`. This directory can be copied outside the checkout and
+`version: ~> 0.0.2`. This directory can be copied outside the checkout and
 installed independently with `shards install`.

@@ -16,5 +16,5 @@ enabled. For TLS, use a `clickhouses://` URL and set `CLICKHOUSE_TLS_CA` when
 trusting a private CA.
 
 The standalone manifest installs `shardscry/clickhouse` from GitHub with
-`version: ~> 0.0.1`. Copy this directory anywhere and run `shards install`;
+`version: ~> 0.0.2`. Copy this directory anywhere and run `shards install`;
 the application has no dependency on other examples or the repository checkout.

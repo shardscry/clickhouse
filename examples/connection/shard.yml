@@ -1,11 +1,11 @@
 name: clickhouse_connection_example
-version: 0.0.1
+version: 0.0.2
 crystal: ">= 1.21.0"
 
 dependencies:
   clickhouse:
     github: shardscry/clickhouse
-    version: ~> 0.0.1
+    version: ~> 0.0.2
 
 targets:
   example:

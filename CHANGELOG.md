@@ -1,12 +1,19 @@
 # Changelog
 
-## Unreleased
+## 0.0.2
 
 ### Added
 
+- Add a pre-commit hook for formatting, Ameba, library type-checking, and local specs.
+- Add repository-specific bug report and feature request templates.
 - Generate the API reference in `docs/` during pre-commit checks and require
   generated changes to be reviewed and staged.
 - Add `make coverage` and a CI job using kcov 43 to publish local-spec coverage.
+
+### Changed
+
+- Align source, shard manifest, and standalone example versions at `0.0.2`.
+- Update every example to the published `~> 0.0.2` driver dependency.
 
 ## 0.0.1
 

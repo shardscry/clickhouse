@@ -1,13 +1,24 @@
-# ClickHouse 0.0.1
+# ClickHouse 0.0.2
 
-The first numbered release of the native Crystal ClickHouse shard, following
-`0.0.1-draft`. This is an early development release; public APIs and compatibility
-coverage may change. Requires Crystal 1.21.0 or newer; install with
-`github: shardscry/clickhouse` and `version: ~> 0.0.1`.
+The native Crystal ClickHouse shard. This is an early development release;
+public APIs and compatibility coverage may change. Requires Crystal 1.21.0 or
+newer; install with
+`github: shardscry/clickhouse` and `version: ~> 0.0.2`.
 
-This release aligns source/manifest versions at `0.0.1`, adds README badges,
-and switches all five standalone examples to the published GitHub dependency.
-The native driver and examples retain the capabilities below.
+## Changes in 0.0.2
+
+- Align `ClickHouse::VERSION`, the shard manifest, and all five example versions
+  at `0.0.2`; examples install the published driver with `~> 0.0.2`.
+- Add local pre-commit checks for formatting, Ameba, library type-checking,
+  and randomized local specs, with real-server tests kept opt-in.
+- Generate the API reference in `docs/` with deterministic metadata, normalize
+  whitespace, and require generated changes to be reviewed and staged.
+- Add `make coverage` and an Ubuntu 24.04 coverage job using a cached kcov v43
+  source build, restricted to shard sources, with an uploaded report artifact.
+- Add bug report and feature request templates with native transport, schema,
+  type, and insert reproduction details.
+
+The native driver and examples retain the capabilities below from `0.0.1`.
 
 ## Native driver
 

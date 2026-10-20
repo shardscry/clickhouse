@@ -14,7 +14,7 @@ shards:
 
   clickhouse:
     git: https://github.com/shardscry/clickhouse.git
-    version: 0.0.1
+    version: 0.0.2
 
   exception_page:
     git: https://github.com/crystal-loot/exception_page.git

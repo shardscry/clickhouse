@@ -2,4 +2,4 @@ version: 2.0
 shards:
   clickhouse:
     git: https://github.com/shardscry/clickhouse.git
-    version: 0.0.1
+    version: 0.0.2

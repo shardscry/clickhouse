@@ -3,7 +3,7 @@
 A standalone Kemal application using the native Crystal ClickHouse driver to
 ingest OpenRTB-shaped bid requests and query their receipt times with SQL. It
 owns its dependencies, handlers, entities, repositories, and specs. Its manifest
-installs `shardscry/clickhouse` from GitHub with `version: ~> 0.0.1`. This
+installs `shardscry/clickhouse` from GitHub with `version: ~> 0.0.2`. This
 directory can be copied and run independently of the repository checkout;
 no shared example files are required.
 

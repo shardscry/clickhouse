@@ -19,12 +19,12 @@ Add the repository to your application's `shard.yml` and run `shards install`:
 dependencies:
   clickhouse:
     github: shardscry/clickhouse
-    version: ~> 0.0.1
+    version: ~> 0.0.2
 ```
 
-The current version is **`0.0.1`**, an early development release. APIs and protocol
+The current version is **`0.0.2`**, an early development release. APIs and protocol
 coverage may change as the shard develops. The examples install the published
-GitHub dependency with `~> 0.0.1` and can run outside this checkout. See
+GitHub dependency with `~> 0.0.2` and can run outside this checkout. See
 [release notes](RELEASE_NOTES.md) for capabilities, validation, and known limitations.
 
 ## Connect and query
