@@ -1,8 +1,13 @@
-# ClickHouse 0.0.1-draft — Beta
+# ClickHouse 0.0.1
 
-Initial beta prerelease of the native Crystal ClickHouse shard. Public APIs and
-compatibility guarantees may change before a stable release. Requires Crystal
-1.21.0 or newer; install with `version: 0.0.1-draft`.
+The first numbered release of the native Crystal ClickHouse shard, following
+`0.0.1-draft`. This is an early development release; public APIs and compatibility
+coverage may change. Requires Crystal 1.21.0 or newer; install with
+`github: shardscry/clickhouse` and `version: ~> 0.0.1`.
+
+This release aligns source/manifest versions at `0.0.1`, adds README badges,
+and switches all five standalone examples to the published GitHub dependency.
+The native driver and examples retain the capabilities below.
 
 ## Native driver
 
@@ -55,7 +60,7 @@ compatibility guarantees may change before a stable release. Requires Crystal
   verify behavior beyond encoder/decoder self-round-trips. GitHub Actions
   configures the corresponding amd64 checks; local results above are arm64.
 
-## Beta limitations
+## Current limitations
 
 - No connection pool, crystal-db adapter, ZSTD, external tables, transactions,
   async INSERT, Int/UInt256, Decimal256, AggregateFunction states, or native

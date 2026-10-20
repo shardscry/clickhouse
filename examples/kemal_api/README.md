@@ -2,9 +2,10 @@
 
 A standalone Kemal application using the native Crystal ClickHouse driver to
 ingest OpenRTB-shaped bid requests and query their receipt times with SQL. It
-owns its dependencies, handlers, entities, repositories, and specs. The beta
-driver dependency points to this checkout (`../..`); no `examples/shared` files
-are required.
+owns its dependencies, handlers, entities, repositories, and specs. Its manifest
+installs `shardscry/clickhouse` from GitHub with `version: ~> 0.0.1`. This
+directory can be copied and run independently of the repository checkout;
+no shared example files are required.
 
 This is an ingestion/query example. It does not run auctions or return OpenRTB
 bid responses. The [IAB OpenRTB 2.6 specification](https://github.com/InteractiveAdvertisingBureau/openrtb2.x/blob/main/2.6.md#objectbidrequest)

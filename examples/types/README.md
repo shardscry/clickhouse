@@ -14,7 +14,6 @@ CLICKHOUSE_URL='clickhouse://default:clickhouse_test@127.0.0.1:19000/default' ./
 Requires Crystal 1.21.0. LZ4 is enabled. Use a `clickhouses://` URL for TLS and
 `CLICKHOUSE_TLS_CA` when a private CA is required.
 
-This application has its own manifest and no shared example helpers. Its local
-`path: ../..` dependency uses the `0.0.1-draft` beta prerelease.
-Use `github: shardscry/clickhouse` with
-`version: 0.0.1-draft` when copying the application outside the repository.
+This application has its own manifest and no shared example helpers. It installs
+`shardscry/clickhouse` from GitHub with `version: ~> 0.0.1`, so it can be copied
+outside the repository and installed independently with `shards install`.

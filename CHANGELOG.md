@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.0.1
+
+### Changed
+
+- Publish the numbered `0.0.1` release and align the source and shard versions.
+- Use `github: shardscry/clickhouse` with `~> 0.0.1` in every standalone example.
+- Document the published dependency in the README and example instructions.
+- Support numbered releases and prereleases in the tag-driven release workflow.
+
+### Added
+
+- Crystal 1.21+, ClickHouse Native TCP, and Query client README badges.
+
 ## 0.0.1-draft — Beta prerelease
 
 Initial beta. APIs and compatibility guarantees may change before a stable release.

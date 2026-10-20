@@ -2,7 +2,7 @@ name: Release
 
 on:
   push:
-    tags: ["v*-draft"]
+    tags: ["v*"]
 
 permissions:
   contents: write
@@ -13,7 +13,8 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
-      - name: Check beta release metadata
+      - name: Check release metadata
+        id: metadata
         env:
           RELEASE_TAG: ${{ github.ref_name }}
         run: |
@@ -28,16 +29,24 @@ jobs:
           source_version = re.search(r'^\s*VERSION\s*=\s*"([^"]+)"', source, re.MULTILINE).group(1)
           assert source_version == version, "manifest/source version mismatch"
           assert os.environ["RELEASE_TAG"] == "v" + version, "tag/version mismatch"
-          assert version.endswith("-draft"), "this workflow publishes draft prereleases"
-          assert "Beta" in Path("RELEASE_NOTES.md").read_text(), "missing beta release notes"
+          assert Path("RELEASE_NOTES.md").read_text().startswith("# ClickHouse " + version), "release notes/version mismatch"
+          with open(os.environ["GITHUB_OUTPUT"], "a") as output:
+              output.write("prerelease=" + str("-" in version).lower() + "\n")
           PY
 
-      - name: Publish beta prerelease
+      - name: Publish GitHub release
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
           RELEASE_TAG: ${{ github.ref_name }}
+          PRERELEASE: ${{ steps.metadata.outputs.prerelease }}
         run: |
+          title="ClickHouse $RELEASE_TAG"
+          latest=true
+          if [ "$PRERELEASE" = true ]; then
+            title="$title (Prerelease)"
+            latest=false
+          fi
           release_action=create
           if gh release view "$RELEASE_TAG" >/dev/null 2>&1; then
             release_action=edit
@@ -45,8 +54,8 @@ jobs:
           gh release "$release_action" "$RELEASE_TAG" \
             --verify-tag \
             --target "$GITHUB_SHA" \
-            --title "ClickHouse $RELEASE_TAG (Beta)" \
+            --title "$title" \
             --notes-file RELEASE_NOTES.md \
-            --prerelease \
-            --latest=false \
+            --prerelease="$PRERELEASE" \
+            --latest="$latest" \
             --draft=false

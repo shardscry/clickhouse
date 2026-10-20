@@ -14,7 +14,6 @@ CLICKHOUSE_URL='clickhouse://default:clickhouse_test@127.0.0.1:19000/default' ./
 For TLS, use `clickhouses://` and set `CLICKHOUSE_TLS_CA` to your private CA file
 when required. The server certificate must match the URL hostname.
 
-The local manifest points at the shard in `../..`; the application does not
-depend on any other example. The current `0.0.1-draft` version is a beta prerelease.
-Use `github: shardscry/clickhouse` with
-`version: 0.0.1-draft` when copying the application elsewhere.
+The standalone manifest installs `shardscry/clickhouse` from GitHub with
+`version: ~> 0.0.1`. Copy this directory anywhere and run `shards install`;
+the application does not depend on the repository checkout or other examples.

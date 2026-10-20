@@ -64,13 +64,15 @@ jobs:
       - uses: actions/checkout@v4
       - name: Start the example's disposable ClickHouse server
         run: docker compose -f examples/kemal_api/docker-compose.yml up -d --wait
-      - name: Build and test the standalone API
+      - name: Build and test the standalone API against this checkout
         run: |
           docker run --rm --network clickhouse-kemal-ortb_default \
             -v "$PWD:/app" -w /app/examples/kemal_api \
             -e CRYSTAL_CACHE_DIR=/tmp/crystal-cache \
+            -e SHARDS_OVERRIDE=/tmp/clickhouse-ci.override.yml \
             -e CLICKHOUSE_URL=clickhouse://default:clickhouse_test@clickhouse:9000/default \
-            crystallang/crystal:1.21.0 bash -ec 'shards install
+            crystallang/crystal:1.21.0 bash -ec 'printf "dependencies:\n  clickhouse:\n    path: /app\n" > "$SHARDS_OVERRIDE"
+          shards install
           crystal spec --error-on-warnings --error-trace
           CLICKHOUSE_INTEGRATION=1 crystal spec --error-on-warnings --error-trace
           crystal build src/main.cr --error-on-warnings -o /tmp/kemal_api'

@@ -13,8 +13,8 @@ shards:
     version: 1.2.4
 
   clickhouse:
-    path: ../..
-    version: 0.0.1-draft
+    git: https://github.com/shardscry/clickhouse.git
+    version: 0.0.1
 
   exception_page:
     git: https://github.com/crystal-loot/exception_page.git

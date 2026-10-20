@@ -1,5 +1,5 @@
 version: 2.0
 shards:
   clickhouse:
-    path: ../..
-    version: 0.0.1-draft
+    git: https://github.com/shardscry/clickhouse.git
+    version: 0.0.1

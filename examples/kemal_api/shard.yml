@@ -1,5 +1,5 @@
 name: clickhouse_kemal_api
-version: 0.0.1-draft
+version: 0.0.1
 crystal: ">= 1.21.0"
 
 targets:
@@ -11,8 +11,8 @@ dependencies:
     github: athena-framework/dependency-injection
     version: ~> 0.4.6
   clickhouse:
-    path: ../..
-    version: 0.0.1-draft
+    github: shardscry/clickhouse
+    version: ~> 0.0.1
   kemal:
     github: kemalcr/kemal
     version: ~> 1.15.0

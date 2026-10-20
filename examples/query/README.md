@@ -14,6 +14,6 @@ Requires Crystal 1.21.0. Set `CLICKHOUSE_TLS_CA` for a private CA when using a
 `clickhouses://` URL. Fully consume streaming results; early exit closes the
 connection to avoid reusing an unread response.
 
-The standalone manifest uses `path: ../..` for this `0.0.1-draft` beta prerelease.
-Use `github: shardscry/clickhouse` with
-`version: 0.0.1-draft` when moving the application outside the checkout.
+The standalone manifest installs `shardscry/clickhouse` from GitHub with
+`version: ~> 0.0.1`. This directory can be copied outside the checkout and
+installed independently with `shards install`.

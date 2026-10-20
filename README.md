@@ -1,5 +1,9 @@
 # ClickHouse
 
+[![Crystal](https://img.shields.io/badge/Crystal-1.21%2B-000000?logo=crystal&logoColor=white)](https://crystal-lang.org/)
+[![ClickHouse Native](https://img.shields.io/badge/ClickHouse-Native%20TCP%20Client-FFCC01?logo=clickhouse&logoColor=black)](https://clickhouse.com/)
+[![ClickHouse Query](https://img.shields.io/badge/ClickHouse-Query%20Client-FFCC01?logo=clickhouse&logoColor=black)](https://clickhouse.com/)
+
 A native Crystal driver for ClickHouse over TCP and verified TLS. The shard owns
 the native protocol, columnar type codecs, binary batch inserts, and LZ4/CityHash
 compression. It does not invoke `clickhouse-client` or wrap a C++ client library.
@@ -15,14 +19,13 @@ Add the repository to your application's `shard.yml` and run `shards install`:
 dependencies:
   clickhouse:
     github: shardscry/clickhouse
-    version: 0.0.1-draft
+    version: ~> 0.0.1
 ```
 
-The current version is **`0.0.1-draft`**, an initial **beta prerelease**. APIs and
-protocol coverage may change before a stable release. Pin the exact version
-above when trying it. Examples use local path dependencies so they run directly
-from this checkout. See [release notes](RELEASE_NOTES.md) for capabilities,
-validation, and known limitations.
+The current version is **`0.0.1`**, an early development release. APIs and protocol
+coverage may change as the shard develops. The examples install the published
+GitHub dependency with `~> 0.0.1` and can run outside this checkout. See
+[release notes](RELEASE_NOTES.md) for capabilities, validation, and known limitations.
 
 ## Connect and query
 

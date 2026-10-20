@@ -15,6 +15,6 @@ Requires Crystal 1.21.0 and permissions to create temporary tables. LZ4 is
 enabled. For TLS, use a `clickhouses://` URL and set `CLICKHOUSE_TLS_CA` when
 trusting a private CA.
 
-The standalone manifest uses `path: ../..` for the `0.0.1-draft` beta prerelease.
-Use `github: shardscry/clickhouse` with
-`version: 0.0.1-draft` when copying the application elsewhere.
+The standalone manifest installs `shardscry/clickhouse` from GitHub with
+`version: ~> 0.0.1`. Copy this directory anywhere and run `shards install`;
+the application has no dependency on other examples or the repository checkout.

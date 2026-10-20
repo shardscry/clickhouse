@@ -1,11 +1,11 @@
 name: clickhouse_batch_insert_example
-version: 0.0.1-draft
+version: 0.0.1
 crystal: ">= 1.21.0"
 
 dependencies:
   clickhouse:
-    path: ../..
-    version: 0.0.1-draft
+    github: shardscry/clickhouse
+    version: ~> 0.0.1
 
 targets:
   example:
