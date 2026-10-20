@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+cd "$(git rev-parse --show-toplevel)"
+export CRYSTAL_CACHE_DIR="${CRYSTAL_CACHE_DIR:-.crystal-cache}"
+mkdir -p "$CRYSTAL_CACHE_DIR"
+
+if [[ ! -x bin/ameba ]]; then
+  echo "[pre-commit] missing bin/ameba; run shards install and shards build ameba"
+  exit 1
+fi
+
+format_args=(--check --exclude lib)
+for dependency_dir in examples/*/lib; do
+  if [[ -d "$dependency_dir" ]]; then
+    format_args+=(--exclude "$dependency_dir")
+  fi
+done
+
+echo "[pre-commit] checking Crystal formatting"
+crystal tool format "${format_args[@]}"
+
+echo "[pre-commit] bin/ameba"
+bin/ameba
+
+echo "[pre-commit] type-checking src/clickhouse.cr"
+crystal build --no-codegen --error-on-warnings src/clickhouse.cr
+
+echo "[pre-commit] running local specs"
+CLICKHOUSE_INTEGRATION=0 crystal spec --order=random --error-on-warnings --error-trace

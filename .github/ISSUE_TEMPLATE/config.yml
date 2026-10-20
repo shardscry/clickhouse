@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: ClickHouse Server documentation
+    url: https://clickhouse.com/docs
+    about: Looking for how ClickHouse Server itself behaves? Start here.

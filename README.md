@@ -199,11 +199,15 @@ CLICKHOUSE_URL='clickhouse://default:clickhouse_test@127.0.0.1:19000/default' ./
 
 ```sh
 shards install
-crystal tool format --check --exclude lib --exclude examples/kemal_api/lib
 shards build ameba
-bin/ameba
-crystal spec
+git config core.hooksPath .githooks
+.githooks/pre-commit
 ```
+
+Enable the hook once per clone. It checks formatting, runs Ameba, type-checks the
+library, and runs local specs in random order before each commit. Run
+`.githooks/pre-commit` manually to perform the same checks. Installed example
+dependencies are excluded from formatting.
 
 Real-server specs are opt-in. The Docker configuration pins ClickHouse
 **26.8.31.2 LTS** and **26.9.22.3 stable** by image digest and exposes loopback TCP
